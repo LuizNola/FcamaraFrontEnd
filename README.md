@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, install the project dependencies using de command:
+First, install the project dependencies using de command: 
 
 ```bash
 npm install
