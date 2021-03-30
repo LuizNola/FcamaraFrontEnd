@@ -1,6 +1,28 @@
-// .container {
-//     display: flex;
-// }
+.title {
+    text-decoration-color: #11304D;
+    text-size-adjust:Glory Bold 36px ;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.container {     
+    
+}
+
+
 .buttoncor {
-    background-color: #F9DC62 !important;
+    background-color: #6DDFDF !important;
+    
+}
+
+.form {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.row {
+    
+}
+.custom-input{
+    border-color: #6DDFDF !important; 
 }
