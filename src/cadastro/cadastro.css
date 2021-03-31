@@ -66,16 +66,55 @@ input {
     text-align: center;
     text-align: left;
 }
-
+.description a{
+    color: #11304D;
+    
+}
 .footer-content{
     background-color:#11304D;
     color: #FFFFFF;
-    font-family: 'estedadregular', Arial, sans-serif !important;
-
- 
 
 }
 
-.texto-rodape{
-    justify-content: center;
+.texto-meio {
+    text-align: center;
+}
+.icones {
+    text-align: center;
+    
+}
+.socials li{
+    display: inline;
+    font-size: medium;
+    margin: 0 10px; 
+}
+.socials {
+    padding-right: 25px;
+}
+.socials li i:hover {
+    color: #6DDFDF;
+    transition: color .4s ease;
+}
+
+.icone-face{
+    font-size: 30px;
+    color: #FFFFFF;
+    
+}
+.icone-insta{
+    font-size: 30px;
+    color: #FFFFFF;
+}
+.container-footer{
+    padding-top: 50px;
+    font-weight: 300;
+   
+}
+.lista li{
+    list-style: none;
+    line-height: 30px; 
+}
+.lista a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
