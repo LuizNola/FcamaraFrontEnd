@@ -37,6 +37,7 @@ input {
 }
 
 .botao-criar {
+    position: unset;
     background-color: #6DDFDF !important;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -44,6 +45,7 @@ input {
 }
 
 .botao-cadastrar {
+    position: unset;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
@@ -65,8 +67,15 @@ input {
     text-align: left;
 }
 
-.footer{
-    background-color: #FC8BA9;
-    height: 30%;
+.footer-content{
+    background-color:#11304D;
+    color: #FFFFFF;
+    font-family: 'estedadregular', Arial, sans-serif !important;
 
+ 
+
+}
+
+.texto-rodape{
+    justify-content: center;
 }
