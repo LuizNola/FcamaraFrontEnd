@@ -1,0 +1,34 @@
+.hero {
+    width: 100%;
+    height: 92.4vh;
+    background-image: url(/images/background.png);
+    background-size: cover;
+    background-position: center;
+  h1 {
+    position: absolute;
+
+    left: 788.24px;
+    top: 215.86px;
+
+    font-size: 72px;
+
+    color: #f9dc62;
+
+    
+
+  }
+
+  p {
+    position: absolute;
+    width: 576.52px;
+    height: 243.3px;
+    left: 729.48px;
+    top: 325.83px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 63px;
+    color: white;
+  }
+}
