@@ -1,0 +1,72 @@
+body {
+    font-family: 'estedadregular', Arial, sans-serif !important;
+    font-weight: normal !important;
+    font-style: normal;
+    font-size: 16px !important;
+}
+
+h2 {
+    font-family: 'glorytsiregular', Arial, sans-serif;
+    font-weight: bold !important;
+    font-style: normal;
+    font-size: 36px !important;
+}
+
+input {
+    font-family: 'estedadregular', Arial, sans-serif !important;
+    font-weight: normal !important;
+    font-style: normal;
+    font-size: 18px !important;
+    border-radius: 20px !important;
+}
+
+.btn {
+    font-family: 'estedadregular', Arial, sans-serif !important;
+    font-weight: 500 !important;
+    font-style: normal;
+    font-size: 16px !important;
+    height: 60px;
+    border-radius: 20px !important;
+   
+}
+
+.title {
+    color: #11304D;
+    text-align: center;
+    margin-top: 50px !important;
+}
+
+.botao-criar {
+    background-color: #6DDFDF !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.botao-cadastrar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.custom-input{
+    border-color: #6DDFDF !important; 
+    height: 50px;
+}
+.custom-input-1{
+    border-color: #6DDFDF !important; 
+    margin-top: 5%;
+    height: 50px;
+}
+
+.description{
+    margin-top: 3%;
+    text-align: center;
+    text-align: left;
+}
+
+.footer{
+    background-color: #FC8BA9;
+    height: 30%;
+
+}
