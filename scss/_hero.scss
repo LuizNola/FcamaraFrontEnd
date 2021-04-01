@@ -1,34 +1,31 @@
 .hero {
-    width: 100%;
-    height: 92.4vh;
-    background-image: url(/images/background.png);
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  height: 92.4vh;
+
+  background-size: cover;
+  background-position: center;
+
+  .banner {
+    
+    width: 730px;
+    padding-left: 7px;
+  }
   h1 {
     position: absolute;
-
-    left: 788.24px;
-    top: 215.86px;
-
-    font-size: 72px;
-
-    color: #f9dc62;
-
-    
-
+    left: 880.24px;
+    top: 165.86px;
+    font-size: 100px;
+    color: $darkBlue;
   }
 
   p {
     position: absolute;
-    width: 576.52px;
-    height: 243.3px;
-    left: 729.48px;
-    top: 325.83px;
-
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 63px;
-    color: white;
+    width: 585.52px;
+    height: 250.3px;
+    left: 830.48px;
+    top: 335.83px;
+    font-size: 44px;
+    line-height: 56px;
+    color: $darkBlue;
   }
 }
