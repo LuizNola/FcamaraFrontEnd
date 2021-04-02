@@ -1,31 +1,49 @@
 .hero {
-  width: 100%;
-  height: 92.4vh;
+  //display: grid;
+  //grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  padding: 0 30px;
+  div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    float: left;
 
-  background-size: cover;
-  background-position: center;
+    @media (max-width: 67em) {
+      align-items: center;
+    }
+
+  }
 
   .banner {
-    
-    width: 730px;
+    flex: 1;
+    max-width: 900px;
+    min-width: 500px;
     padding-left: 7px;
+    margin: 0 auto;
   }
   h1 {
-    position: absolute;
-    left: 880.24px;
-    top: 165.86px;
     font-size: 100px;
     color: $darkBlue;
   }
 
   p {
-    position: absolute;
-    width: 585.52px;
-    height: 250.3px;
-    left: 830.48px;
-    top: 335.83px;
     font-size: 44px;
     line-height: 56px;
     color: $darkBlue;
+
+    @media (max-width: 62.5em) {
+      text-align: center;
+    }
+  }
+  .buttons {
+    display: inline-block;
+
+    @media (max-width: 87em){
+      display: flex;
+
+    }
   }
 }
