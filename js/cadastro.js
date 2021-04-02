@@ -62,7 +62,7 @@ function cadastrarUsuario() {
     body: JSON.stringify(data)
   }).then(res => {
     console.log(res);
-    alert('Sucesso!')}
+    alert('Cadastro realizado com Sucesso!')}
   )
   .catch(reason => alert(reason));
 }
