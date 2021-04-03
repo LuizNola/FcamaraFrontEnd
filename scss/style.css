@@ -440,7 +440,11 @@ textarea {
     margin-bottom: 20px;
   }
 
-  
+  .wrapper .faq-titulo{
+    font-size: 1.5em !important;
+  }
+
+
 }
 
 @media (max-width: 77.5em) {
