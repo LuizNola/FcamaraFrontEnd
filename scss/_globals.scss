@@ -1,9 +1,9 @@
 html {
+  min-height: 100vh;
   font-size: 100%;
   box-sizing: border-box;
   font-family: "glorytsiregular";
   background-color: #f6f9fc;
-  
 }
 
 *,
@@ -13,10 +13,16 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
+  color: #11304d;
 }
 .header-container {
+  position: relative;
+  flex-grow: 1;
   max-width: 100%;
   margin: 50px 90px 50px;
   align-items: center;
@@ -30,6 +36,19 @@ a,
 a:visited,
 a:hover {
   text-decoration: none;
+}
+
+.page-icon {
+  position: absolute;
+  right: -59px;
+  bottom: -32px;
+  max-width: 500px;
+}
+
+@media (min-width: 40rem) {
+  .page-icon {
+    display: none;
+  }
 }
 
 // FlexBox
@@ -55,9 +74,10 @@ a:hover {
 button,
 .button {
   position: relative;
-  width: 245px;
+  width: 270px;
   height: 60px;
   margin: 0 15px;
+
   cursor: pointer;
   background: #ffe882;
   color: #11304d;
@@ -67,11 +87,13 @@ button,
   line-height: 20px;
   font-weight: 700;
 
-  @media (max-width: 62.5em){
-    display: inline-block;
-
+  @media (max-width: 92.8125em) {
+    margin: 20px 100px;
   }
 
+  @media (max-width: 77.5em) {
+    margin: 20px 100px;
+  }
 }
 
 //Visibility
@@ -91,19 +113,28 @@ button,
 // Footer
 
 .footer {
-  width: 100%;
-  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  padding: 30px 50px;
   background-color: $darkBlue;
   ul,
   li {
     list-style-type: none;
   }
 
+  &::before {
+    content: "Ajude Colorir - Todos os direitos reservados";
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &_social {
-    display: block;
-    float: right;
-    margin-right: 243px;
-    margin-top: 30px;
     color: white;
 
     h2 {
@@ -127,7 +158,6 @@ button,
       color: white;
       font-size: 14px;
       line-height: 25px;
-      margin-left: 240px;
     }
   }
 }
@@ -165,9 +195,14 @@ button,
       font-size: 18px;
       line-height: 32px;
       font-weight: 600;
+      transition: 0.5s;
 
       &:not(:last-child) {
         margin-right: 32px;
+      }
+
+      &:hover {
+        color: rgb(116, 116, 117);
       }
     }
 
@@ -181,11 +216,4 @@ button,
     font-size: $font-med;
     color: $darkBlue;
   }
-}
-
-.header-container{
-  img{
-    
-  }
-
 }

@@ -8,13 +8,16 @@ const confirmPassIcon = document.querySelector("#confirmPassIcon");
 let showPass = false;
 let showConfirmPass = false;
 
-createBtn.addEventListener("click", (e) => {
-//   e.preventDefault();
+createBtn.addEventListener("click", (e) => { 
+  e.preventDefault();
 
   if (passInput.value != confirmPassInput.value) {
     alert("Senha e confirmar senha sÃ£o diferentes");
     return;
   }
+
+  const mask = document.querySelector("#mask");
+  mask.classList.add("active");
 });
 
 passIcon.addEventListener("click", () => {

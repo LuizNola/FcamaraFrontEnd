@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="scss/style.css" />
+  <link rel="stylesheet" href="components/popup.css">
+  <link rel="stylesheet" href="/scss/cadastro.css" />
+  <link rel="stylesheet" href="/scss/login.css" />
+  <title>Cadastro</title>
+</head>
+
+<body>
+  <section class="header-container">
+    <header class="header">
+      <nav class="flex flex-jc-sb flex-ai-c">
+        <a href="/" class="header_logo">
+          <h1>Logo</h1>
+        </a>
+
+        <a href="#" class="header_menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="header_links">
+          <a href="#">Quero receber</a>
+          <a href="#">Quero doar</a>
+          <a href="#">Meus pedidos</a>
+          <a href="#">Sobre nós</a>
+          <a href="" class="linha"></a>
+
+          <a href="#">Entrar</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <form>
+        <legend>Cadastro</legend>
+
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required />
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" placeholder="(21) 98725-6012" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+
+        <label for="senha">Senha</label>
+        <div class="icon-input-container">
+          <input type="password" id="senha" required />
+          <img src="../../images/icons/hide-pass.svg" id="passIcon" alt="hide password" />
+        </div>
+
+        <label for="confirmSenha">Confirmar senha</label>
+        <div class="icon-input-container">
+          <input type="password" id="confirmSenha" required />
+          <img src="../../images/icons/hide-pass.svg" id="confirmPassIcon" alt="show password" />
+        </div>
+
+        <p>
+          Ao usar Ajude Colorir você está de acordo com os nossos
+          <a href="">termos de serviço</a> e nossa
+          <a href="">politica do site</a>
+        </p>
+
+        <button type="submit" class="login-button">Criar Conta</button>
+        <a href="./login.html" class="link">Já tenho cadastro</a>
+      </form>
+    </main>
+  </section>
+  <img src="/images/icons/cadastro-img.svg" alt="" class="page-icon">
+
+  <div id="mask">
+    <div class="popup">
+      <img src="images/icons/emoji-estudante.svg" alt="Emoji estudante">
+
+      <h2>Feito!</h1>
+
+        <p> Cadastro feito com sucesso :) </p>
+
+        <a href="login.html">Fazer login</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+
+    <div class="footer_links">
+      <ul>
+        <li><a href="/pedidos.html">Doe</a></li>
+        <li><a href="/criar-pedidos.html">Peça uma doação</a></li>
+        <li><a href="/">Quem somos</a></li>
+        <li><a href="/">Ajuda</a></li>
+      </ul>
+    </div>
+
+    <div class="footer_social">
+      <h2>Siga nossos canais</h2>
+      <a href="#">
+        <img src="/images/icons/facebook.svg" alt="">
+      </a>
+      <a href="#">
+        <img src="/images/icons/instagram.svg" alt="">
+      </a>
+    </div>
+
+  </footer>
+
+  <script src="/js/cadastro.js"></script>
+</body>
+
+</html>

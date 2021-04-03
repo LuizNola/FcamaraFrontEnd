@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/scss/style.css" />
+  <link rel="stylesheet" href="components/popup.css">
+  <title>Criar pedido</title>
+</head>
+
+<body>
+  <section class="header-container">
+    <header class="header">
+      <nav class="flex flex-jc-sb flex-ai-c">
+        <a href="/" class="header_logo">
+          <h1>Logo</h1>
+        </a>
+
+        <a href="#" class="header_menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="header_links">
+          <a href="/criar-pedidos.html">Quero receber</a>
+          <a href="/pedidos.html">Quero doar</a>
+          <a href="/meus-pedidos.html">Meus pedidos</a>
+          <a href="/">Sobre nós</a>
+          <a href="" class="linha"></a>
+
+          <a href="/login.html">Entrar</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="criar-pedido">
+
+        <div class="left-column">
+          <div class="img-wrapper">
+            <input type="file" hidden />
+            <img src="/images/icons/plus.svg" alt="add" />
+          </div>
+          <p>Tem foto de exemplo do material?</p>
+        </div>
+
+        <form class="form-criar-pedido">
+          <legend>Criar pedido</legend>
+          <label for="material">Material</label>
+          <div class="icon-input-container">
+            <input type="text" id="material" />
+            <img src="../../images/icons/menos-icon.svg" id="minusBtn" />
+            <span id="quantity">0</span>
+            <img src="../../images/icons/mais-icon.svg" id="plusBtn" />
+          </div>
+
+          <label for="detalhes">Detalhes - Quantas folhas? Qual tamanho?</label>
+          <input type="text" id="detalhes" />
+
+          <div class="button-ad">
+            <a type="button" class="button-adicionar" id="add-material"><img src="/images/icons/button-adicionar.svg"
+                class="button-adicionar" alt="" />Adicionar mais materiais</a>
+            <a type="button" class="button-adicionar"><img src="/images/icons/button-adicionar.svg"
+                class="button-adicionar" alt="" />Adicionar lista de material escolar</a>
+          </div>
+
+          <label for="endereco">Endereço da escola</label>
+          <input type="text" id="endereco" required />
+
+          <label for="ano">Ano Letivo</label>
+          <input type="text" id="ano" required />
+
+          <label for="historia">Conte sua História</label>
+          <textarea id="historia" rows="4" required> </textarea>
+
+          <div class="form-footer">
+            <div class="switch-wrapper">
+              <p>Mostrar o meu nome</p>
+              <div class="switch" id="switch-1">
+                <div class="inner-btn"></div>
+              </div>
+            </div>
+
+            <div class="switch-wrapper">
+              <p>Mostrar nome do aluno</p>
+              <div class="switch" id="switch-2">
+                <div class="inner-btn"></div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" id="criarPedidoBtn" class="login-button">Criar pedido</button>
+        </form>
+      </div>
+    </main>
+    <img src="/images/icons/criar-pedido-img.svg" alt="" class="page-icon" />
+  </section>
+
+  <div id="mask">
+    <div class="popup">
+      <img src="/images/icons/emoji-estudante.svg" alt="Emoji estudante">
+
+      <h2>Feito!</h1>
+
+        <p> Seu pedido foi feito com sucesso :) </p>        
+
+        <a id="fecharPopUp">Fechar</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+
+    <div class="footer_links">
+      <ul>
+        <li><a href="/pedidos.html">Doe</a></li>
+        <li><a href="/criar-pedidos.html">Peça uma doação</a></li>
+        <li><a href="/">Quem somos</a></li>
+        <li><a href="/">Ajuda</a></li>
+      </ul>
+    </div>
+
+    <div class="footer_social">
+      <h2>Siga nossos canais</h2>
+      <a href="#">
+        <img src="/images/icons/facebook.svg" alt="">
+      </a>
+      <a href="#">
+        <img src="/images/icons/instagram.svg" alt="">
+      </a>
+    </div>
+
+  </footer>
+
+  <script src="/js/image.js"></script>
+  <script src="/js/switch.js"></script>
+
+  <script src="/js/criar-pedido.js"></script>
+</body>
+
+</html>

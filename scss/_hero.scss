@@ -11,10 +11,9 @@
     flex-direction: column;
     float: left;
 
-    @media (max-width: 67em) {
+    @media (max-width: 77.5em) {
       align-items: center;
     }
-
   }
 
   .banner {
@@ -23,6 +22,10 @@
     min-width: 500px;
     padding-left: 7px;
     margin: 0 auto;
+    @media (max-width: 77.5em) {
+      display: none;
+    }
+    
   }
   h1 {
     font-size: 100px;
@@ -34,16 +37,15 @@
     line-height: 56px;
     color: $darkBlue;
 
-    @media (max-width: 62.5em) {
+    @media (max-width: 77.5em) {
       text-align: center;
     }
   }
   .buttons {
     display: inline-block;
 
-    @media (max-width: 87em){
+    @media (max-width: 87em) {
       display: flex;
-
     }
   }
 }
