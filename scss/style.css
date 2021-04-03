@@ -411,6 +411,38 @@ textarea {
   line-height: 56px;
 }
 
+/*Corrigindo erros de responsividade*/
+
+@media (max-width: 425px){
+  .hero {
+    margin: 0 auto;
+  }
+
+  .hero .heading {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .hero .heading h1{
+    text-align: center;
+    font-size: 40px;
+  }
+  .hero .heading p{
+    font-size: 35px;
+  }
+
+  .hero .heading .link-buttons{
+    flex-wrap: wrap;
+    width: 200px;
+  }
+
+  .hero .heading .link-buttons a{
+    margin-bottom: 20px;
+  }
+
+  
+}
+
 @media (max-width: 77.5em) {
   .hero p {
     text-align: center;
