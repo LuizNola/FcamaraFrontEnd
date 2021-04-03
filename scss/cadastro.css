@@ -29,7 +29,6 @@ p a:active {
 
 .page-icon {
   position: absolute;
-  left: -2px;
-  bottom: -105px;
-  max-width: 500px;
+  left: -100px;
+  bottom: -50px;
 }

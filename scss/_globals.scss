@@ -20,16 +20,23 @@ body {
   padding: 0;
   color: #11304d;
 }
+
 .header-container {
   position: relative;
   flex-grow: 1;
   max-width: 100%;
-  margin: 50px 90px 50px;
+
+  margin: 50px 90px;
+  padding: 0 30px 50px;
   align-items: center;
 
   border: 8px solid #11304d;
   box-sizing: border-box;
   border-radius: 30px;
+
+  @media (max-width: 60rem) {
+    margin: 50px 20px;
+  }
 }
 
 a,
@@ -38,14 +45,19 @@ a:hover {
   text-decoration: none;
 }
 
+.titulo {
+  text-align: center;
+  font-weight: 700;
+}
+
 .page-icon {
   position: absolute;
   right: -59px;
   bottom: -32px;
-  max-width: 500px;
+  max-width: 400px;
 }
 
-@media (min-width: 40rem) {
+@media (max-width: 80rem) {
   .page-icon {
     display: none;
   }
@@ -107,113 +119,5 @@ button,
 .hide-for-desktop {
   @include breakpoint-up(large) {
     display: none;
-  }
-}
-
-// Footer
-
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  position: relative;
-  padding: 30px 50px;
-  background-color: $darkBlue;
-  ul,
-  li {
-    list-style-type: none;
-  }
-
-  &::before {
-    content: "Ajude Colorir - Todos os direitos reservados";
-    color: white;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  &_social {
-    color: white;
-
-    h2 {
-      margin-bottom: 40px;
-      font-weight: 300;
-      font-size: 20px;
-    }
-
-    a {
-      margin: 0 18px;
-      margin-top: 76px;
-    }
-  }
-
-  &_links {
-    display: flex;
-    flex-direction: column;
-    line-height: 2.25;
-
-    a {
-      color: white;
-      font-size: 14px;
-      line-height: 25px;
-    }
-  }
-}
-
-//header
-
-.header {
-  nav {
-    padding: 10px 50px;
-  }
-  &_logo {
-    h1 {
-      font-weight: 700;
-    }
-  }
-
-  &_menu {
-    //Mobile Menu
-
-    > span {
-      display: block;
-      width: 26px;
-      height: 2px;
-      color: black;
-
-      &:not(:last-child) {
-        margin-bottom: 3px;
-      }
-    }
-  }
-
-  &_links {
-    a {
-      color: #11304d;
-      font-size: 18px;
-      line-height: 32px;
-      font-weight: 600;
-      transition: 0.5s;
-
-      &:not(:last-child) {
-        margin-right: 32px;
-      }
-
-      &:hover {
-        color: rgb(116, 116, 117);
-      }
-    }
-
-    .linha {
-      border: 1px solid #5e5e5e;
-      transform: rotate(-90.6deg);
-    }
-  }
-
-  &_cta {
-    font-size: $font-med;
-    color: $darkBlue;
   }
 }

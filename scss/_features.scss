@@ -1,16 +1,15 @@
 .wrapper {
-  margin: 0 auto;
-  color: $darkBlue;
-  margin: 100px 50px 50px;
-  
+  margin-top: 50px;
+  color: $darkBlue;  
 
   .image-faq {
     margin-right: 20px;
   }
+
   .lista-item {
     background: white;
     border-radius: 7px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding: 10px;
     box-shadow: 0 3px 6px rgba(50, 50, 90, 0.3);
   }
@@ -56,9 +55,5 @@
   
   .trigger-input:checked + .trigger-wrapper .faq-titulo::after {
     transform: rotate(45deg) scale(1.08);
-  }
-
-  @media (max-width: 62.5em) {
-    padding: 0 50px;
   }
 }

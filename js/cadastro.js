@@ -1,6 +1,6 @@
 const passInput = document.querySelector("#senha");
 const confirmPassInput = document.querySelector("#confirmSenha");
-const createBtn = document.querySelector("button[type='submit']");
+const createBtn = document.querySelector("button[type='button']");
 
 const passIcon = document.querySelector("#passIcon");
 const confirmPassIcon = document.querySelector("#confirmPassIcon");
@@ -8,13 +8,8 @@ const confirmPassIcon = document.querySelector("#confirmPassIcon");
 let showPass = false;
 let showConfirmPass = false;
 
-createBtn.addEventListener("click", (e) => { 
+createBtn.addEventListener("click", (e) => {
   e.preventDefault();
-
-  if (passInput.value != confirmPassInput.value) {
-    alert("Senha e confirmar senha sÃ£o diferentes");
-    return;
-  }
 
   const mask = document.querySelector("#mask");
   mask.classList.add("active");
@@ -40,32 +35,35 @@ confirmPassIcon.addEventListener("click", () => {
 
 function cadastrarUsuario() {
   if (passInput.value != confirmPassInput.value) {
-    alert("Senha e confirmar senha sÃ£o diferentes");
+    alert("Senha e confirmar senha são diferentes");
     return;
   }
 
-  var nameInput = document.getElementById('nome').value;
-  var emailInput = document.getElementById('email').value;
-  var senhaInput = document.getElementById('senha').value;
-  
+  var nameInput = document.getElementById("nome").value;
+  var emailInput = document.getElementById("email").value;
+  var senhaInput = document.getElementById("senha").value;
+
   const data = {
     name: nameInput,
     email: emailInput,
-    pass: senhaInput
+    pass: senhaInput,
   };
 
   var myHeaders = new Headers();
 
-  myHeaders.append('Content-Type', 'application/json');
-  
+  myHeaders.append("Content-Type", "application/json");
+
   fetch("http://localhost:5000/user", {
     method: "POST",
-    mode: 'cors',
+    mode: "cors",
     headers: myHeaders,
-    body: JSON.stringify(data)
-  }).then(res => {
-    console.log(res);
-    alert('Cadastro realizado com Sucesso!')}
-  )
-  .catch(reason => alert(reason));
+    body: JSON.stringify(data),
+  })
+    .then((res) => {
+      console.log(res);
+      
+      const mask = document.querySelector("#mask");
+      mask.classList.add("active");
+    })
+    .catch((reason) => alert(reason));
 }

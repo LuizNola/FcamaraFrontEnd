@@ -1,11 +1,10 @@
 .hero {
-  //display: grid;
-  //grid-template-columns: 1fr 1fr;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 15px;
-  padding: 0 30px;
-  div {
+  align-items: center;
+  column-gap: 60px;
+
+  .heading {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -18,34 +17,47 @@
 
   .banner {
     flex: 1;
-    max-width: 900px;
+    max-width: 700px;
     min-width: 500px;
     padding-left: 7px;
     margin: 0 auto;
     @media (max-width: 77.5em) {
       display: none;
     }
-    
   }
   h1 {
     font-size: 100px;
     color: $darkBlue;
+    margin-bottom: 20px;
   }
 
   p {
+    margin: 0;
     font-size: 44px;
-    line-height: 56px;
     color: $darkBlue;
+    line-height: 56px;
 
     @media (max-width: 77.5em) {
       text-align: center;
     }
   }
-  .buttons {
-    display: inline-block;
 
-    @media (max-width: 87em) {
-      display: flex;
+  .link-buttons {
+    margin: 50px 0;
+
+    display: flex;
+    column-gap: 50px;
+
+    .button {
+      margin: 0;
+      width: 300px;
+      padding: 20px 0;
+      text-align: center;
+      transition: all .4s ease-in;
+
+      &:hover{
+        color: white;
+      }
     }
   }
 }

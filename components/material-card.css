@@ -3,7 +3,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 50px auto 300px;
+  margin: 50px auto 150px;
   max-width: 1260px;
 }
 
