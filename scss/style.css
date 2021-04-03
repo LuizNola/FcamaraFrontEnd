@@ -413,7 +413,7 @@ textarea {
 
 /*Corrigindo erros de responsividade*/
 
-@media (max-width: 425px){
+@media (max-width: 600px){
   .hero {
     margin: 0 auto;
   }
@@ -444,6 +444,13 @@ textarea {
     font-size: 1.5em !important;
   }
 
+  form{
+    max-width: 50%;
+  }
+
+  form .login-button{
+    max-width: 200px;
+  }
 
 }
 
