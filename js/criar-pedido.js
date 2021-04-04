@@ -1,6 +1,4 @@
 const materiais = [];
-const minusBtn = document.querySelector("#minusBtn");
-const plusBtn = document.querySelector("#plusBtn");
 const quantity = document.querySelector("#quantity");
 
 const anoInput = document.querySelector("#ano");
@@ -14,20 +12,7 @@ const criarPedidoBtn = document.querySelector("#criarPedidoBtn");
 
 const fecharPopUpBtn = document.querySelector("#fecharPopUp");
 
-minusBtn.addEventListener("click", () => {
-  if (quantity.innerHTML > 0) quantity.innerHTML--;
-  else quantity.innerHTML = 0;
-});
-
-plusBtn.addEventListener("click", () => {
-  quantity.innerHTML++;
-});
-
 addMaterialBtn.addEventListener("click", () => {
-  if (quantity.innerHTML == 0) {
-    alert("Quantidade não pode ser zero");
-    return;
-  }
 
   materiais.push({
     material: materialInput.value,

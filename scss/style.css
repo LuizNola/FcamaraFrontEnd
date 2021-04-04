@@ -302,10 +302,6 @@ textarea {
   border: none;
 }
 
-.icon-input-container img {
-  cursor: pointer;
-}
-
 .login-button {
   display: block;
   margin: 50px auto 20px;
