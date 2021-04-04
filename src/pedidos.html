@@ -10,8 +10,8 @@
     <title>Pedidos</title>
   </head>
 
-  <body>
-    <section class="header-container" onclick="listarPedidos()">
+  <body onload="listarPedidos()">
+    <section class="header-container" >
       <header class="header">
         <nav class="flex flex-jc-sb flex-ai-c">
           <a href="/" class="header_logo">
@@ -61,13 +61,13 @@
           <li class="material-card">
             <a href="detalhe-pedido.html">
               <img src="/images/lapisdecor.jpg" alt="" />
-              <p>
+              <p class="material-lista">
                 <img src="/images/icons/pencil.svg" alt="Lapis" />
-                Caixa de lápis de cor 12 cores
+                <strong>Caixa de lápis de cor 12 cores</strong>
               </p>
-              <p>
+              <p class="cidade">
                 <img src="/images/icons/location.svg" alt="Localização" />
-                Cotia - SP
+                <strong>Cotia - SP</strong>
               </p>
             </a>
           </li>

@@ -21,4 +21,16 @@ async function listarPedidos(){
     .then(result => result)
     .catch(error => console.log('error', error));
 
+    
+    element.map((item, i) =>{
+        let CardPedido = document.querySelector('.material-card').cloneNode(true)
+        CardPedido.setAttribute('data-key', i);
+
+        CardPedido.querySelector('.material-card .material-lista strong').innerHTML = item.material_list
+        CardPedido.querySelector('.material-card .cidade strong').innerHTML = item.address
+
+
+        document.querySelector('.main-pedidos ul').append(CardPedido)
+
+    })
 }
