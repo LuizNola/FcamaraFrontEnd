@@ -77,21 +77,25 @@ fecharPopUpBtn.addEventListener("click", () => {
 
 function criarPedido() {
  
-  var nameInput = document.getElementById("nome").value;
-  var emailInput = document.getElementById("email").value;
-  var senhaInput = document.getElementById("senha").value;
+  var materialInput = document.getElementById("material").value;
+  var detalhesInput = document.getElementById("detalhes").value;
+  var enderecoInput = document.getElementById("endereco").value;
+  var anoInput = document.getElementById("ano").value;
+  var historiaInput = document.getElementById("historia").value;
 
   const data = {
-    name: nameInput,
-    email: emailInput,
-    pass: senhaInput,
+    material: materialInput,
+    detalhes: detalhesInput,
+    endereco: enderecoInput,
+    ano: anoInput,
+    historia: historiaInput,
   };
 
   var myHeaders = new Headers();
 
   myHeaders.append("Content-Type", "application/json");
 
-  fetch("http://localhost:5000/user", {
+  fetch("http://localhost:5000/students", {
     method: "POST",
     mode: "cors",
     headers: myHeaders,
@@ -104,4 +108,7 @@ function criarPedido() {
       mask.classList.add("active");
     })
     .catch((reason) => alert(reason));
+}
+if (Cookies.get('token') === undefined) {
+  window.location.href = "login.html";
 }

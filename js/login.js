@@ -16,3 +16,32 @@ passIcon.addEventListener("click", () => {
     ? "../../images/icons/show-pass.svg"
     : "../../images/icons/hide-pass.svg";
 });
+
+function login() {
+
+  var emailInput = document.getElementById("email").value;
+  var senhaInput = document.getElementById("senha").value;
+
+  const data = {
+    email: emailInput,
+    pass: senhaInput,
+  };
+
+  var myHeaders = new Headers();
+
+  myHeaders.append("Content-Type", "application/json");
+
+  fetch("http://localhost:5000/session", {
+    method: "POST",
+    mode: "cors",
+    headers: myHeaders,
+    body: JSON.stringify(data),
+  })
+  .then((res) => {
+    res.json().then(response => {
+      // setando o token para um dia
+      Cookies.set('token', response.token, { expires: 1 });
+      window.location.href = "index.html";
+    })
+  }).catch((reason) => alert(reason));
+}
