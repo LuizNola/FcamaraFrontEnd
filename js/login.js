@@ -41,4 +41,5 @@ function login() {
       window.location.href = "index.html";
     })
   }).catch((reason) => alert(reason));
+  
 }
