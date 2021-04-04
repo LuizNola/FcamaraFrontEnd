@@ -455,6 +455,21 @@ textarea {
   .main-pedidos .button-novo-pedido {
     margin: 0 !important;
   }
+
+  .detalhes-pedido{
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 !important;
+    }
+  .detalhes-pedido img{
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  .header-container{
+    padding: 0 20px 40px;
+  }
 }
 
 @media (max-width: 77.5em) {
@@ -757,7 +772,7 @@ textarea {
 }
 
 .detalhes-pedido {
-  max-width: 910px;
+  max-width: ;
   border: 3px;
   padding: 30px;
   margin: 80px auto 350px;
