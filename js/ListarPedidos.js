@@ -49,6 +49,7 @@ async function listarPedidos(){
         let CardPedido = document.querySelector('.material-card').cloneNode(true)
         CardPedido.setAttribute('data-key', i);
 
+        CardPedido.querySelector('.material-card a').href = `detalhe-pedido.html?id=${item.id}`
         CardPedido.querySelector('.material-card .material-lista strong').innerHTML = item.material_list
         CardPedido.querySelector('.material-card .cidade strong').innerHTML = item.address
         CardPedido.querySelector('.material-card .material-img').src = img
@@ -97,7 +98,7 @@ async function listarPedidos(){
 
             let img = imgsJson.images[Math.floor(Math.random() *imgsJson.images.length)]
 
-    
+            CardPedido.querySelector('.material-card a').href = `detalhe-pedido.html?id=${item.id}`
             CardPedido.querySelector('.material-card .material-lista strong').innerHTML = item.material_list
             CardPedido.querySelector('.material-card .cidade strong').innerHTML = item.address
             CardPedido.querySelector('.material-card .material-img').src = img

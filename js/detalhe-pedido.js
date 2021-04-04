@@ -6,6 +6,10 @@ btn.addEventListener("click", () =>{
 
 async function detalharPedido(){
 
+    var parameter =  location.search.slice(1);
+    var chaveValor = parameter.split('=')
+    console.log(chaveValor)
+
     let datails = document.querySelector('.detalhes-a .datails')
     let name = document.querySelector('.item .name')
     let age = document.querySelector('.item .age')
@@ -19,7 +23,7 @@ async function detalharPedido(){
         redirect: 'follow'
       };
       
-      let result = await fetch("http://localhost:5000/students/unique/e0b9e566-7fd7-464a-980b-4a912715367f", requestOptions)
+      let result = await fetch(`http://localhost:5000/students/unique/${chaveValor[1]}`, requestOptions)
         .then(response => response.json())
         .then(result => result)
         .catch(error => console.log('error', error));
