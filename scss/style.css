@@ -470,6 +470,12 @@ textarea {
   .row{
     flex-direction: column;
   }
+
+  .form-criar-pedido {
+    
+    width: 100% !important;
+    min-width: 200px;
+  }
 }
 
 @media (max-width: 77.5em) {
