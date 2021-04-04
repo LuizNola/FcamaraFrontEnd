@@ -11,6 +11,23 @@
   </head>
 
   <body onload="listarPedidos()">
+
+    <div class="modelos">
+      <li class="material-card">
+        <a href="detalhe-pedido.html">
+          <img src="http://i.mlcdn.com.br/portaldalu/fotosconteudo/68927.jpg" alt="" class="material-img"/>
+          <p class="material-lista">
+            <img src="/images/icons/pencil.svg" alt="Lapis" />
+            <strong>Caixa de lápis de cor 12 cores</strong>
+          </p>
+          <p class="cidade">
+            <img src="/images/icons/location.svg" alt="Localização" />
+            <strong>Cotia - SP</strong>
+          </p>
+        </a>
+      </li>
+    </div>
+  
     <section class="header-container" >
       <header class="header">
         <nav class="flex flex-jc-sb flex-ai-c">
@@ -44,8 +61,8 @@
             type="text"
             id="txtBusca"
             placeholder="Busque por escola, cidades, tipo de material ..."
-          />
-          <img src="/images/icons/serch.svg" class="btnBusca" alt="Buscar" />
+            />
+          <img src="/images/icons/serch.svg" class="btnBusca" alt="Buscar" onclick="listarPedidos()"/>
         </div>
 
         <div class="button-novo-pedido">
@@ -58,20 +75,8 @@
         </div>
 
         <ul>
-          <li class="material-card">
-            <a href="detalhe-pedido.html">
-              <img src="http://i.mlcdn.com.br/portaldalu/fotosconteudo/68927.jpg" alt="" class="material-img"/>
-              <p class="material-lista">
-                <img src="/images/icons/pencil.svg" alt="Lapis" />
-                <strong>Caixa de lápis de cor 12 cores</strong>
-              </p>
-              <p class="cidade">
-                <img src="/images/icons/location.svg" alt="Localização" />
-                <strong>Cotia - SP</strong>
-              </p>
-            </a>
-          </li>
-        
+         
+        </ul>
       <img src="/images/icons/pedidos-img.svg" alt="" class="pedidos-img" />
     </section>
 

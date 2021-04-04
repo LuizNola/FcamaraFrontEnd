@@ -1,25 +1,4 @@
-
-
 async function listarPedidos(){
-
-    const data = {
-        "skipPagination": 0,
-        "takeMax": 10
-    }
-
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    const requestOptions =  {
-        method: 'GET',
-        headers: myHeaders,
-        mode: "cors",
-    }
-
-    let {element, pages} = await fetch("http://localhost:5000/students", requestOptions)
-    .then(response => response.json())
-    .then(result => result)
-    .catch(error => console.log('error', error));
 
     var imgsJson = {
         "images": 
@@ -33,7 +12,33 @@ async function listarPedidos(){
     ]
     }
 
-    console.log(imgsJson)
+    var pesquisa = document.querySelector('#txtBusca').value 
+
+    if(pesquisa == ''){
+    const data = {
+        "skipPagination": 0,
+        "takeMax": 10
+    }
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const requestOptions =  {
+        method: 'POST',
+        headers: myHeaders,
+        mode: "cors",
+        body: JSON.stringify(data)
+        
+    }
+
+    let {element, pages} = await fetch("http://localhost:5000/students/all", requestOptions)
+    .then(response => response.json())
+    .then(result => result)
+    .catch(error => console.log('error', error));
+
+    console.log(element)
+
+   
 
     
     element.map((item, i) =>{
@@ -52,4 +57,55 @@ async function listarPedidos(){
         document.querySelector('.main-pedidos ul').append(CardPedido)
 
     })
+}else{
+
+        document.querySelector('.main-pedidos ul').remove()
+
+        const newUl =  document.createElement('ul')
+
+        document.querySelector('.main-pedidos').append(newUl)
+        
+       const data = {
+            "searchParameters": pesquisa,
+            "skipPagination": 0,
+            "takeMax": 10
+        }
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+    
+        const requestOptions =  {
+            method: 'POST',
+            headers: myHeaders,
+            mode: "cors",
+            body: JSON.stringify(data)
+            
+        }
+    
+        let {element, pages} = await fetch("http://localhost:5000/students/search", requestOptions)
+        .then(response => response.json())
+        .then(result => result)
+        .catch(error => console.log('error', error));
+
+        
+
+      
+
+        element.map((item, i)=>{
+            let CardPedido = document.querySelector('.material-card').cloneNode(true)
+            CardPedido.setAttribute('data-key', i);
+
+            let img = imgsJson.images[Math.floor(Math.random() *imgsJson.images.length)]
+
+    
+            CardPedido.querySelector('.material-card .material-lista strong').innerHTML = item.material_list
+            CardPedido.querySelector('.material-card .cidade strong').innerHTML = item.address
+            CardPedido.querySelector('.material-card .material-img').src = img
+            
+    
+            document.querySelector('.main-pedidos ul').append(CardPedido)
+        })
+        
+    }
+
 }
