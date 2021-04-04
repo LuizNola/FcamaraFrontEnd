@@ -1,0 +1,50 @@
+.header {
+  &_logo {
+    h1 {
+      font-weight: 700;
+    }
+  }
+
+  &_menu {
+    //Mobile Menu
+
+    > span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      color: black;
+
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  &_links {
+    a {
+      color: #11304d;
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: 600;
+      transition: 0.5s;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      &:hover {
+        color: rgb(116, 116, 117);
+      }
+    }
+
+    .linha {
+      border: 1px solid #5e5e5e;
+      transform: rotate(-90.6deg);
+    }
+  }
+
+  &_cta {
+    font-size: $font-med;
+    color: $darkBlue;
+  }
+}

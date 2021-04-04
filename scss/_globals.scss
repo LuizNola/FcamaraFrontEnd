@@ -1,7 +1,9 @@
 html {
+  min-height: 100vh;
   font-size: 100%;
   box-sizing: border-box;
   font-family: "glorytsiregular";
+  background-color: #f6f9fc;
 }
 
 *,
@@ -11,15 +13,54 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  line-height: 0.3;
+  color: #11304d;
+}
+
+.header-container {
+  position: relative;
+  flex-grow: 1;
+  max-width: 100%;
+
+  margin: 50px 90px;
+  padding: 0 30px 50px;
+  align-items: center;
+
+  border: 8px solid #11304d;
+  box-sizing: border-box;
+  border-radius: 30px;
+
+  @media (max-width: 60rem) {
+    margin: 50px 20px;
+  }
 }
 
 a,
 a:visited,
 a:hover {
   text-decoration: none;
+}
+
+.titulo {
+  text-align: center;
+  font-weight: 700;
+}
+
+.page-icon {
+  position: absolute;
+  right: -59px;
+  bottom: -32px;
+  max-width: 400px;
+}
+
+@media (max-width: 80rem) {
+  .page-icon {
+    display: none;
+  }
 }
 
 // FlexBox
@@ -45,24 +86,26 @@ a:hover {
 button,
 .button {
   position: relative;
-  width: 245px;
-  height: 61px;
-  left: 730px;
-  top: 652px;
+  width: 270px;
+  height: 60px;
   margin: 0 15px;
-  cursor: pointer;
 
-  color: #11304D !important;
+  cursor: pointer;
   background: #ffe882;
+  color: #11304d;
   border-radius: 15px;
   border: 0;
-  
-
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 20px;
   font-weight: 700;
+
+  @media (max-width: 92.8125em) {
+    margin: 20px 100px;
+  }
+
+  @media (max-width: 77.5em) {
+    margin: 20px 100px;
+  }
 }
 
 //Visibility

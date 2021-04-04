@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/scss/style.css">
+  <link rel="shortcut icon" href="/images/icons/caderno.svg">
+  <title>Meus pedidos</title>
+</head>
+
+<body>
+  <section class="header-container">
+    <header class="header">
+      <nav class="flex flex-jc-sb flex-ai-c">
+        <a href="/" class="header_logo">
+          <h1>Logo</h1>
+        </a>
+
+        <a href="#" class="header_menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="header_links">
+          <a href="criar-pedidos.html">Quero receber</a>
+          <a href="pedidos.html">Quero doar</a>
+          <a href="meus-pedidos.html">Meus pedidos</a>
+          <a href="/src/index.html">Sobre nós</a>
+          <a class="linha"></a>
+
+          <a href="login.html">Entrar</a>
+        </div>
+      </nav>
+    </header>
+
+    <h1 class="titulo">Meus pedidos</h1>
+    <main class="detalhes-pedido detalhes-meu-pedido">
+
+      <div class="detalhes-a">
+        <img src="/images/caderno.jpg" alt="" />
+        <h3>Detalhes</h3>
+        <p>Caderno brochura de cor sortida 96 folhas.</p>
+      </div>
+
+      <div class="detalhes-b">
+
+        <div class="row">
+          <div class="item">
+            <h4>Responsável</h4>
+            <p>Gabriela Silva</p>
+          </div>
+          <div class="item">
+            <h4>Ano letivo</h4>
+            <p>1º Ano do Ensino Fundamental I</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h4>Endereço da escola</h4>
+          <p>R. Marambaia, Nº 408 - Irajá, Rio de Janeiro - RJ</p>
+        </div>
+
+        <div class="row">
+
+          <div class="item">
+            <h4>Materiais</h4>
+            <ul>
+              <li>5x Caderno brochura</li>
+              <li>2x Borracha</li>
+              <li>1x Caixa de lápis de cor 12 cores</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h4>Valor estimado</h4>
+            <p>R$45,60</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h4>Sobre</h4>
+          <p>
+            Depois da pandemia do corona vírus ficou muito difícil vender
+            meus docinhos, e meu filho entrou no novo ano e a lista de
+            materiais aumentou, se puder ajudar, ficaremos muito felizes!
+          </p>
+        </div>
+
+        <div class="buttons-container">
+          <button type="submit" class="btn-editar">Editar</button>
+          <button type="submit" class="btn-doar">Quero doar!</button>
+        </div>
+    </main>
+    <a href="criar-pedidos.html" class="button-adicionar" id="meus-pedidos-add-material">
+      <img src="/images/icons/button-adicionar.svg" class="button-adicionar" alt="" />
+      Adicionar mais materiais
+    </a>
+
+    <img src="/images/icons/criar-pedido-img.svg" class="page-icon">
+  </section>
+
+  <footer class="footer">
+
+    <div class="footer_links">
+      <ul>
+        <li><a href="pedidos.html">Doe</a></li>
+        <li><a href="criar-pedidos.html">Peça uma doação</a></li>
+        <li><a href="/src/index.html">Quem somos</a></li>
+        <li><a href="/src/index.html">Ajuda</a></li>
+      </ul>
+    </div>
+
+    <div class="footer_social">
+      <h2>Siga nossos canais</h2>
+      <a href="#">
+        <img src="/images/icons/facebook.svg" alt="">
+      </a>
+      <a href="#">
+        <img src="/images/icons/instagram.svg" alt="">
+      </a>
+    </div>
+
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+</body>
+
+</html>

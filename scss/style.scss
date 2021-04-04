@@ -1,6 +1,17 @@
 @import "variables";
 @import "mixins";
 @import "globals";
-@import "header";
+
+@import "partials/header";
+@import "partials/footer";
+
+@import "form";
 @import "hero";
 @import "fonts";
+@import "features";
+
+@import "./layouts/index";
+@import "./layouts/criar-pedido";
+@import "./layouts/pedidos";
+@import "./layouts/detalhe-pedido";
+@import "./layouts/meus-pedidos";

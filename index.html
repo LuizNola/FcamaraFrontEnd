@@ -7,44 +7,141 @@
     <link rel="stylesheet" href="scss/style.css" />
     <title>Ajuda Colorir</title>
   </head>
+
+  
   <body>
-    <header class="header">
-      <nav class="flex flex-jc-sb flex-ai-c">
-        <a href="/" class="header_logo">
-          <h1>Logo</h1>
-        </a>
+    <section class="header-container">
+      <header class="header">
+        <nav class="flex flex-jc-sb flex-ai-c">
+          <a href="/" class="header_logo">
+            <h1>Logo</h1>
+          </a>
+  
+          <a href="#" class="header_menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+  
+          <div class="header_links">
+            <a href="#">Quero receber</a>
+            <a href="#">Quero doar</a>
+            <a href="#">Meus pedidos</a>
+            <a href="#">Sobre nós</a>
+            <a href="" class="linha"></a>
+  
+            <a href="#">Entrar</a>
+          </div>
+        </nav>
+      </header>
 
-        <a href="#" class="header_menu hide-for-desktop">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a>
-
-        <div class="header_links hide-for-mobile">
-          <a href="#">Tela inicial</a>
-          <a href="#">Quero doar</a>
-          <a href="#">Quero receber</a
-          ><a href="./src/cadastro/cadastro.html">Fazer cadastro</a>
-
-          <a href="#">Entrar</a>
+      <section class="hero">
+        <img src="images/icons/reading.svg" alt="" class="banner" />
+        <div>
+          <h1>Ajude Colorir</h1>
+          <p>
+            Olá! <img src="images/icons/mao.png" /> <br />Aqui você encontra
+            diversas oportunidades de ajudar a colorir a educação de uma criança.
+          </p>
+          
+          <div class="buttons">
+            <button href="#" class="button">
+              Quero receber
+            </button>
+            <button href="#" class="button">
+              Quero doar
+            </button>
+          </div>
+          
         </div>
-      </nav>
-    </header>
-
-    <section class="hero">
-        <h1>Ajude Colorir</h1>
-
-        <p>
-          Olá! <img src="images/icons/maozinha.png"> <br>Aqui você encontra diversas oportunidades de ajudar a colorir a
-          educação de uma criança.
-        </p>
-
-        <button href="#" class="button header_cta hide-for-mobile">
-          Quero receber
-        </button>
-        <button href="#" class="button header_cta hide-for-mobile">
-          Quero doar
-        </button>
+  
+      </section>
+  
+      <section class="features">
+        <div class="wrapper">
+          <div class="lista-item">
+            <input class="trigger-input" id="faq-titulo-1" type="checkbox" />
+            <div class="trigger-wrapper">
+              <label for="faq-titulo-1">
+                <h2 class="faq-titulo">
+                  <img src="images/icons/coracao.svg" class="image-faq" />Nossa
+                  causa
+                </h2>
+              </label>
+              <p class="faq-conteudo">
+                O material escolar é uma das ferramentas mais importantes para o
+                desempenho e autoestima na vida escolar das crianças. Nós queremos
+                ajudar a facilitar a troca de doação entre pais e doares de forma
+                anônima e segura.
+              </p>
+            </div>
+          </div>
+  
+          <div class="lista-item">
+            <input class="trigger-input" id="faq-titulo-2" type="checkbox" />
+            <div class="trigger-wrapper">
+              <label for="faq-titulo-2">
+                <h2 class="faq-titulo">
+                  <img src="images/icons/seta.svg" class="image-faq" />Como
+                  funciona
+                </h2>
+              </label>
+              <p class="faq-conteudo">
+                Pais e mães criam pedidos de materiais escolares de acordo com a
+                necessidade dos pequenos Doadores encontram um pedido para
+                contribuir e escolhem entre doar o material presencialmente ou de
+                forma online.
+              </p>
+            </div>
+          </div>
+  
+          <div class="lista-item">
+            <input class="trigger-input" id="faq-titulo-3" type="checkbox" />
+            <div class="trigger-wrapper">
+              <label for="faq-titulo-3">
+                <h2 class="faq-titulo">
+                  <img src="images/icons/caderno.svg" class="image-faq" />A
+                  entrega
+                </h2>
+              </label>
+              <p class="faq-conteudo">
+                Se a doação for presencial, pais e doador se encontram no endereço
+                da escola da criança e a entrega é realizada. Caso o doador
+                escolha completar de forma online, é feito um crédito para os pais
+                usarem em uma loja do setor. Tudo de forma segura e confiável.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+    
+      </section>
     </section>
+    <footer class="footer">
+  
+      <div class="footer_social">
+        <h2>Siga nossos canais</h2>
+        <a href="#">
+          <img src="/images/icons/facebook.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="/images/icons/instagram.svg" alt="">
+        </a>
+      </div>
+
+      <div class="footer_links">
+        <ul>
+          <li><a href="#">Doe</a></li>
+          <li><a href="#">Peça uma doação</a></li>
+          <li><a href="#">Quem somos</a></li>
+          <li><a href="#">Ajuda</a></li>
+        </ul>
+      </div>
+    </footer>
+    
+
+   
+
+    
   </body>
 </html>

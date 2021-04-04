@@ -1,0 +1,59 @@
+.reviews {
+  display: flex;  
+  column-gap: 50px;
+  list-style: none;
+
+  padding: 0;
+  position: relative;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;  
+}
+
+.reviews .btn {
+  font-size: 20px;
+
+  top: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+
+  cursor: pointer;
+}
+
+.reviews .prev {
+  left: 10px;
+}
+.reviews .next {
+  right: 10px;
+}
+
+.review {
+  width: 400px;
+
+  display: flex;
+  flex: none;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 15px 50px;
+  border-radius: 16px;
+  background: #ffe882;
+
+  scroll-snap-align: start;
+}
+
+.review img {
+  width: 100px;
+  height: 100px;
+}
+
+.review p {
+  font-size: 24px;
+  color: #11304d;
+}
+
+.review small {
+  font-size: 18px;
+  margin-left: auto;
+}
