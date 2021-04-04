@@ -947,7 +947,17 @@ h1 {
   bottom: 0px;
 }
 
+@media (min-width: 768px){
+  .navigation-mobile {
+    display: none;
+  }
+}
 
+@media (max-width: 768px){
+  .navigation-desktop {
+    display: none;
+  }
+}
 
 #menuToggle
 {
@@ -1048,23 +1058,20 @@ h1 {
 
 #menu
 {
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #F9DC62;
-  list-style-type: none;
-  font-family: "glorytsiregular";
-  font-weight: bold;
-  font-size: 50px;
-  
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  position: fixed;
+    width: 100%;
+    margin: -130px 0 0 -90px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #F9DC62;
+    list-style-type: none;
+    font-family: "glorytsiregular";
+    font-weight: bold;
+    font-size: 50px;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    height: 100%;
 }
 
 #menu li
