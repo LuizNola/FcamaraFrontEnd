@@ -470,6 +470,10 @@ textarea {
   .header-container{
     padding: 0 20px 40px;
   }
+
+  .row{
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 77.5em) {
@@ -772,7 +776,6 @@ textarea {
 }
 
 .detalhes-pedido {
-  max-width: ;
   border: 3px;
   padding: 30px;
   margin: 80px auto 350px;
