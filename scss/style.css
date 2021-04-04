@@ -452,6 +452,9 @@ textarea {
     max-width: 200px;
   }
 
+  .main-pedidos .button-novo-pedido {
+    margin: 0 !important;
+  }
 }
 
 @media (max-width: 77.5em) {
