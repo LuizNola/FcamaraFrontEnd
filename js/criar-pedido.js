@@ -26,13 +26,6 @@ addMaterialBtn.addEventListener("click", () => {
 });
 
 criarPedidoBtn.addEventListener("click", (e) => {
-  if (materiais.length < 1) {
-    alert("Pelo menos um material deve ser adicionado");
-    return;
-  }
-
-  const switchBtn1 = document.querySelector("#switch-1");
-  const switchBtn2 = document.querySelector("#switch-2");
 
   const pedido = {
     materiais,
