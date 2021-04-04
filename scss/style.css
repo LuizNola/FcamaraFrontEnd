@@ -141,8 +141,8 @@ button,
   }
 }
 
-.header_logo h1 {
-  font-weight: 700;
+.header_logo  {
+  margin-top: 50px;
 }
 
 .header_menu > span {
