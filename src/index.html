@@ -15,6 +15,7 @@
 <body>
   <section class="header-container">
     <header class="header">
+      <!-- menu existente -->
       <nav class="flex flex-jc-sb flex-ai-c">
         <a href="/" class="header_logo">
           <h1>Logo</h1>
@@ -34,6 +35,26 @@
           <a class="linha"></a>
 
           <a href="login.html">Entrar</a>
+        </div>
+      </nav>
+      <!--  -->
+      
+      <nav role="navigation">
+        <div id="menuToggle">
+          
+          <input type="checkbox" />
+          
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <ul id="menu">
+            <a href="#"><li>Quero receber</li></a>
+            <a href="#"><li>Quero doar</li></a>
+            <a href="#"><li>Meus pedidos</li></a>
+            <a href="#"><li>Sobre nós</li></a>
+            <a href="login.html" target="_blank"><li>Entrar</li></a>
+          </ul>
         </div>
       </nav>
     </header>
@@ -132,31 +153,30 @@
         Quero doar
       </a>
     </div>
-
   </section>
+    <footer class="footer">
 
-  <footer class="footer">
+      <div class="footer_links">
+        <ul>
+          <li><a href="pedidos.html">Doe</a></li>
+          <li><a href="criar-pedidos.html">Peça uma doação</a></li>
+          <li><a href="/src/index.html">Quem somos</a></li>
+          <li><a href="/src/index.html">Ajuda</a></li>
+        </ul>
+      </div>
 
-    <div class="footer_links">
-      <ul>
-        <li><a href="pedidos.html">Doe</a></li>
-        <li><a href="criar-pedidos.html">Peça uma doação</a></li>
-        <li><a href="/src/index.html">Quem somos</a></li>
-        <li><a href="/src/index.html">Ajuda</a></li>
-      </ul>
-    </div>
+      <div class="footer_social">
+        <h2>Siga nossos canais</h2>
+        <a href="#">
+          <img src="/images/icons/facebook.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="/images/icons/instagram.svg" alt="">
+        </a>
+      </div>
 
-    <div class="footer_social">
-      <h2>Siga nossos canais</h2>
-      <a href="#">
-        <img src="/images/icons/facebook.svg" alt="">
-      </a>
-      <a href="#">
-        <img src="/images/icons/instagram.svg" alt="">
-      </a>
-    </div>
+    </footer>
 
-  </footer>
 
   <script src="/js/quote.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
