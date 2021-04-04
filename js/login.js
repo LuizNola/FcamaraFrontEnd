@@ -4,9 +4,6 @@ const createBtn = document.querySelector("button[type='submit']");
 
 let showPass = false;
 
-createBtn.addEventListener("click", (e) => {
-  //   e.preventDefault();  
-});
 
 passIcon.addEventListener("click", () => {
   showPass = !showPass;
