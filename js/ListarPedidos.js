@@ -1,5 +1,4 @@
 async function listarPedidos(){
-
     var imgsJson = {
         "images": 
         [
@@ -110,3 +109,5 @@ async function listarPedidos(){
     }
 
 }
+
+window.onload = listarPedidos()

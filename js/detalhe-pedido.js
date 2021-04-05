@@ -8,7 +8,7 @@ async function detalharPedido(){
 
     var parameter =  location.search.slice(1);
     var chaveValor = parameter.split('=')
-    console.log(chaveValor)
+    
 
     let datails = document.querySelector('.detalhes-a .datails')
     let name = document.querySelector('.item .name')
@@ -17,6 +17,8 @@ async function detalharPedido(){
     let materials = document.querySelector('.item .materials')
     let report = document.querySelector('.item .report') 
     let contact = document.querySelector('.popup .contact')
+
+  
 
     var requestOptions = {
         method: 'GET',
@@ -28,7 +30,9 @@ async function detalharPedido(){
         .then(result => result)
         .catch(error => console.log('error', error));
 
-        datails.innerHTML = result[0].datails
+        console.log(result[0])
+
+        datails.innerHTML = result[0].Details
         name.innerHTML = result[0].nome
         age.innerHTML = result[0].age
         adress.innerHTML = result[0].address
@@ -37,3 +41,5 @@ async function detalharPedido(){
         contact.innerHTML = result[0].contact
 
 }
+
+window.onload = detalharPedido()

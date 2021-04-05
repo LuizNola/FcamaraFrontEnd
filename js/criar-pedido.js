@@ -30,7 +30,7 @@ const data = {
   address: enderecoInput.value,
   material_list: materialInput.value,
   contact: contatoInput.value,
-  Detail: detalhesInput.value,
+  Details: detalhesInput.value,
   report: historiaInput.value
 };
 
