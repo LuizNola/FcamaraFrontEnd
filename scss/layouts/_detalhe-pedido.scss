@@ -1,0 +1,85 @@
+.detalhes-pedido {
+  max-width: 910px;
+  border: 3px;
+  padding: 30px;
+  margin: 80px auto 350px;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+
+  img {
+    width: 100%;
+    width: 380px;
+    height: 380px;
+    border-radius: 15px;
+
+    object-fit: cover;
+  }
+
+  @media (max-width: 80em) {
+    margin: 50px 30px;
+  }
+}
+
+.detalhes-a {
+  flex: 1;
+}
+
+.detalhes-b {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .button-detalhes {
+    display: block;
+
+    width: 100%;
+    margin: auto 0 25px;
+    border-radius: 10px;
+
+    background-color: #6fcf97;
+    transition: all 0.4s ease-out;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  a {
+    display: block;
+    text-align: center;
+  }
+}
+
+.item {
+  h4 {
+    margin: 0;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  p {
+    margin: 5px 0 15px;
+  }
+}
+
+.row {
+  display: flex;
+  column-gap: 50px;
+  align-items: flex-start;
+}
+
+.page-icon {
+  left: -60px;
+  bottom: -40px;
+  
+}

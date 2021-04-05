@@ -1,0 +1,49 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  padding: 30px 50px;
+  background-color: $darkBlue;
+  ul,
+  li {
+    list-style-type: none;
+  }
+
+  &::before {
+    content: "Ajude Colorir - Todos os direitos reservados";
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &_social {
+    color: white;
+
+    h2 {
+      margin-bottom: 40px;
+      font-weight: 300;
+      font-size: 20px;
+    }
+
+    a {
+      margin: 0 18px;
+      margin-top: 76px;
+    }
+  }
+
+  &_links {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.25;
+
+    a {
+      color: white;
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+}

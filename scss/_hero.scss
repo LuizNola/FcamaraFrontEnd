@@ -1,34 +1,63 @@
 .hero {
-    width: 100%;
-    height: 92.4vh;
-    background-image: url(/images/background.png);
-    background-size: cover;
-    background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 60px;
+
+  .heading {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    float: left;
+
+    @media (max-width: 77.5em) {
+      align-items: center;
+    }
+  }
+
+  .banner {
+    flex: 1;
+    max-width: 700px;
+    min-width: 500px;
+    padding-left: 7px;
+    margin: 0 auto;
+    @media (max-width: 77.5em) {
+      display: none;
+    }
+  }
   h1 {
-    position: absolute;
-
-    left: 788.24px;
-    top: 215.86px;
-
-    font-size: 72px;
-
-    color: #f9dc62;
-
-    
-
+    font-size: 100px;
+    color: $darkBlue;
+    margin-bottom: 20px;
   }
 
   p {
-    position: absolute;
-    width: 576.52px;
-    height: 243.3px;
-    left: 729.48px;
-    top: 325.83px;
+    margin: 0;
+    font-size: 44px;
+    color: $darkBlue;
+    line-height: 56px;
 
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 63px;
-    color: white;
+    @media (max-width: 77.5em) {
+      text-align: center;
+    }
+  }
+
+  .link-buttons {
+    margin: 50px 0;
+
+    display: flex;
+    column-gap: 50px;
+
+    .button {
+      margin: 0;
+      width: 300px;
+      padding: 20px 0;
+      text-align: center;
+      transition: all .4s ease-in;
+
+      &:hover{
+        color: white;
+      }
+    }
   }
 }

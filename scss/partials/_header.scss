@@ -1,9 +1,4 @@
 .header {
- 
-
-  nav {
-    padding: 10px 50px;
-  }
   &_logo {
     h1 {
       font-weight: 700;
@@ -31,9 +26,14 @@
       font-size: 18px;
       line-height: 32px;
       font-weight: 600;
+      transition: 0.5s;
 
       &:not(:last-child) {
         margin-right: 32px;
+      }
+
+      &:hover {
+        color: rgb(116, 116, 117);
       }
     }
 

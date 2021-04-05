@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/scss/style.css" />
+  <link rel="shortcut icon" href="/images/icons/caderno.svg">
+  <link rel="stylesheet" href="/components/popup.css">
+  <title>Detalhe pedido</title>
+</head>
+
+<body">
+  <section class="header-container">
+    <header class="header">
+      <nav class="flex flex-jc-sb flex-ai-c navigation-desktop">
+        <a href="/" class="header_logo">
+          <img src="../images/Group.png" alt="Logo Ajude Colorir">
+        </a>
+
+        <a href="#" class="header_menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="header_links">
+          <a href="criar-pedidos.html">Quero receber</a>
+          <a href="pedidos.html">Quero doar</a>
+          <a href="meus-pedidos.html">Meus pedidos</a>
+          <a href="/src/index.html">Sobre nós</a>
+          <a class="linha"></a>
+
+          <a href="login.html" id="login">Entrar</a>
+          <a onclick="logoff()" id="logoff">Sair</a>
+        </div>
+      </nav>
+      <!-- menu mobile -->
+      <nav role="navigation" class="navigation-mobile">
+        <div id="menuToggle">
+          
+          <input type="checkbox" />
+          
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <ul id="menu">
+            <a href="#"><li>Tela Inicial</li></a>
+            <a href="#"><li>Quero doar</li></a>
+            <a href="#"><li>Quero Receber</li></a>
+            <a href="#"><li>Fazer Cadastro</li></a>
+            <a href="login.html"><li>Entrar</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!--  -->
+    </header>
+
+    <h1 class="titulo">Detalhes do pedido</h1>
+    <main class="detalhes-pedido">
+      <div class="detalhes-a">
+        <img src="/images/caderno.jpg" alt="" />
+        <h3>Detalhes</h3>
+        <p class="datails"></p>
+      </div>
+
+      <div class="detalhes-b">
+
+        <div class="row">
+          <div class="item">
+            <h4>Nome do aluno</h4>
+            <p class='name'></p>
+          </div>
+          <div class="item">
+            <h4>Idade</h4>
+            <p class='age'></p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h4>Cidade</h4>
+          <p class='adress'></p>
+        </div>
+
+        <div class="row">
+
+          <div class="item">
+            <h4>Materiais</h4>
+            <p class='materials'></p>
+          </div>
+        </div>
+
+        <div class="item">
+          <h4>Sobre</h4>
+          <p class='report'></p>
+        </div>
+
+        <button type="submit" class="button-detalhes">Quero doar!</button>
+        <a href="pedidos.html">Ver outros pedidos</a>
+      </div>
+    </main>
+
+
+    <img src="/images/icons/cadastro-img.svg" class="page-icon" />
+  </section>
+
+  <div id="mask">
+    <div class="popup">
+      <img src="/images/icons/coracao-emog.svg" alt="Emoji estudante">
+
+      <h2>Entre em contato!</h2>
+
+      <p class='contact'></p>
+
+      <a href="pedidos.html">Voltar</a>
+    </div>
+  </div>
+  <footer class="footer">
+
+    <div class="footer_links">
+      <ul>
+        <li><a href="pedidos.html">Doe</a></li>
+        <li><a href="criar-pedidos.html">Peça uma doação</a></li>
+        <li><a href="/src/index.html">Quem somos</a></li>
+        <li><a href="/src/index.html">Ajuda</a></li>
+      </ul>
+    </div>
+
+    <div class="footer_social">
+      <h2>Siga nossos canais</h2>
+      <a href="#">
+        <img src="/images/icons/facebook.svg" alt="">
+      </a>
+      <a href="#">
+        <img src="/images/icons/instagram.svg" alt="">
+      </a>
+    </div>
+
+  </footer>
+
+  <script src="/js/detalhe-pedido.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="/js/auth.js"></script>
+
+</body>
+
+</html>

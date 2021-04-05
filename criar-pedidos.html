@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/scss/style.css" />
+  <link rel="stylesheet" href="/components/popup.css">
+  <link rel="shortcut icon" href="/images/icons/caderno.svg">
+  <title>Criar pedido</title>
+</head>
+
+<body>
+  <section class="header-container">
+    <header class="header">
+      <nav class="flex flex-jc-sb flex-ai-c navigation-desktop">
+        <a href="/" class="header_logo">
+          <img src="../images/Group.png" alt="Logo Ajude Colorir">
+        </a>
+
+        <a href="#" class="header_menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="header_links">
+          <a href="criar-pedidos.html">Quero receber</a>
+          <a href="pedidos.html">Quero doar</a>
+          <a href="meus-pedidos.html">Meus pedidos</a>
+          <a href="/src/index.html">Sobre nós</a>
+          <a class="linha"></a>
+
+        
+            <a onclick="logoff()" id="logoff">Sair</a>
+        </div>
+      </nav>
+      <!-- menu mobile -->
+      <nav role="navigation" class="navigation-mobile">
+        <div id="menuToggle">
+          
+          <input type="checkbox" />
+          
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <ul id="menu">
+            <a href="#"><li>Tela Inicial</li></a>
+            <a href="#"><li>Quero doar</li></a>
+            <a href="#"><li>Quero Receber</li></a>
+            <a href="#"><li>Fazer Cadastro</li></a>
+            <a href="login.html"><li>Entrar</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!--  -->
+    </header>
+
+    <main>
+      <div class="criar-pedido">
+
+        <form class="form-criar-pedido">
+          <legend>Criar pedido</legend>
+
+          <label for="nome">Nome do Responsavel</label>
+          <input type="text" id="nome" />
+
+          <label for="material">Material</label>
+          <div class="icon-input-container">
+            <input type="text" id="material" />
+          </div>
+
+          <label for="detalhes">Detalhes - Quantas folhas? Qual tamanho?</label>
+          <input type="text" id="detalhes" />
+
+          <label for="endereco">Cidade</label>
+          <input type="text" id="endereco" required />
+
+          <label for="ano">Ano Letivo</label>
+          <input type="text" id="ano" required />
+
+          <label for="contact">Informações de Contato</label>
+          <input type="text" id="contact" required />
+
+          <label for="historia">Conte sua História</label>
+          <textarea id="historia" rows="4" required> </textarea>
+
+          <button type="button" id="criarPedidoBtn" class="login-button" onclick="criarPedido()">Criar pedido</button>
+        </form>
+      </div>
+    </main>
+    <img src="/images/icons/criar-pedido-img.svg" alt="" class="page-icon" />
+  </section>
+
+  <div id="mask">
+    <div class="popup">
+      <img src="/images/icons/emoji-estudante.svg" alt="Emoji estudante">
+
+      <h2>Feito!</h1>
+
+        <p> Seu pedido foi feito com sucesso :) </p>        
+
+        <a id="fecharPopUp">Fechar</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+
+    <div class="footer_links">
+      <ul>
+        <li><a href="pedidos.html">Doe</a></li>
+        <li><a href="criar-pedidos.html">Peça uma doação</a></li>
+        <li><a href="/src/index.html">Quem somos</a></li>
+        <li><a href="/src/index.html">Ajuda</a></li>
+      </ul>
+    </div>
+
+    <div class="footer_social">
+      <h2>Siga nossos canais</h2>
+      <a href="#">
+        <img src="/images/icons/facebook.svg" alt="">
+      </a>
+      <a href="#">
+        <img src="/images/icons/instagram.svg" alt="">
+      </a>
+    </div>
+
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+
+
+  <script src="/js/criar-pedido.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="./js/bloqeandoRotas.js"></script>
+</body>
+
+</html>

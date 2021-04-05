@@ -1,0 +1,14 @@
+.link-buttons {
+  display: flex;
+  column-gap: 50px;
+  justify-content: center;
+
+  margin-top: 30px;
+
+  a {
+    margin: 0;
+    width: 300px;
+    padding: 20px 0;
+    text-align: center;
+  }
+}
