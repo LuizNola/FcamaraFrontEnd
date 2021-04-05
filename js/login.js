@@ -38,6 +38,7 @@ function login() {
     res.json().then(response => {
       // setando o token para um dia
       Cookies.set('token', response.token, { expires: 1 });
+      Cookies.set('user_id', response.user.id)
       window.location.href = "index.html";
     })
   }).catch((reason) => alert(reason));
