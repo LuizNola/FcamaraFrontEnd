@@ -1,8 +1,10 @@
 
+const nomeInput = document.querySelector("#nome");
 const anoInput = document.querySelector("#ano");
-const materialInput = document.querySelector("#material");
-const detalhesInput = document.querySelector("#detalhes");
 const enderecoInput = document.querySelector("#endereco");
+const materialInput = document.querySelector("#material");
+const contatoInput = document.querySelector("#contact");
+const detalhesInput = document.querySelector("#detalhes");
 const historiaInput = document.querySelector("#historia");
 
 const criarPedidoBtn = document.querySelector("#criarPedidoBtn");
@@ -18,16 +20,35 @@ fecharPopUpBtn.addEventListener("click", () => {
 });
 
 function criarPedido() {
- /* {
-    "create_user_id": "223f2452-7bb4-4b3a-a9e7-f325348c39f6",
-    "nome":"luiz",
-    "age": 14,
-    "address": "Av. São Jorge, 5022, Santos",
-    "material_list": "4 cadernos, 5 Canetas",
-    "contact":"luizn647@gmail.com",
-    "Detail": "cadernos para desenho",
-    "report": "preciso do carno pros meus filhos ja que não tenho dinheiro para comprar"
-}*/
+ 
 
 
+const data = {
+  create_user_id: Cookies.get('user_id'),
+  nome: nomeInput.value,
+  age: anoInput.value,
+  address: enderecoInput.value,
+  material_list: materialInput.value,
+  contact: contatoInput.value,
+  Detail: detalhesInput.value,
+  report: historiaInput.value
+};
+
+console.log(data)
+
+
+var myHeaders = new Headers();
+
+myHeaders.append("Authorization", "Bearer " + Cookies.get('token'));
+
+myHeaders.append("Content-Type", "application/json");
+
+fetch("http://localhost:5000/students", {
+  method: "POST",
+  mode: "cors",
+  headers: myHeaders,
+  body: JSON.stringify(data),
+})
+  .then((res) => {console.log(res);})
+  .catch((reason) => alert(reason));
 }

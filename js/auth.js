@@ -8,6 +8,7 @@ function bloquandoRota(){
 function logoff(){
     window.location.replace("/");
     Cookies.remove('token');
+    Cookies.remove('user_id');
     
 }
 
