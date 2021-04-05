@@ -8,13 +8,6 @@ const confirmPassIcon = document.querySelector("#confirmPassIcon");
 let showPass = false;
 let showConfirmPass = false;
 
-createBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  const mask = document.querySelector("#mask");
-  mask.classList.add("active");
-});
-
 passIcon.addEventListener("click", () => {
   showPass = !showPass;
 
@@ -59,11 +52,15 @@ function cadastrarUsuario() {
     headers: myHeaders,
     body: JSON.stringify(data),
   })
-    .then((res) => {
-      console.log(res);
-      
-      const mask = document.querySelector("#mask");
-      mask.classList.add("active");
-    })
-    .catch((reason) => alert(reason));
+  .then(response => response.json())
+  .then(result => {
+                    if(result.status != 'error'){
+                      const mask = document.querySelector("#mask");
+                      mask.classList.add("active")
+                    }else{
+                      alert(result.message)
+                    }})
+  .catch(error => console.log('error', error));
+
+
 }
