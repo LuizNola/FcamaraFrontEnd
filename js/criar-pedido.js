@@ -40,7 +40,6 @@ console.log(data)
 var myHeaders = new Headers();
 
 myHeaders.append("Authorization", "Bearer " + Cookies.get('token'));
-myHeaders.append("Authorization", "Bearer " + Cookies.get('token'));
 
 myHeaders.append("Content-Type", "application/json");
 
@@ -50,6 +49,13 @@ fetch("http://localhost:5000/students", {
   headers: myHeaders,
   body: JSON.stringify(data),
 })
-  .then((res) => {console.log(res);})
-  .catch((reason) => alert(reason));
+  .then(response => response.json())
+  .then(result => {     if(result.status != 'error'){
+                        alert('Pedido registrado com sucesso');
+                        window.location.href = "pedidos.html"}
+                        else{
+                          alert(result.message)
+                        }
+                      })
+  .catch(error => console.log('error', error));
 }
