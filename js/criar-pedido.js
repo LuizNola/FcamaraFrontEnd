@@ -40,6 +40,7 @@ console.log(data)
 var myHeaders = new Headers();
 
 myHeaders.append("Authorization", "Bearer " + Cookies.get('token'));
+myHeaders.append("Authorization", "Bearer " + Cookies.get('token'));
 
 myHeaders.append("Content-Type", "application/json");
 
