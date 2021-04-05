@@ -37,9 +37,13 @@ function login() {
   .then((res) => {
     res.json().then(response => {
       // setando o token para um dia
+      if(response.status != 'error'){
       Cookies.set('token', response.token, { expires: 1 });
       Cookies.set('user_id', response.user.id)
-      window.location.href = "index.html";
+      window.location.href = "index.html";}
+      else{
+        alert(response.message)
+      }
     })
   }).catch((reason) => alert(reason));
   
